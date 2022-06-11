@@ -24,6 +24,26 @@ exports.getAll = async (req, res) => {
     });
   }
 };
+exports.getById = async (req, res) => {
+  try {
+    const order = await shipment.findById(req.params.id);
+    if (!order)
+      throw new Error();
+      
+    res.status(200).json({
+        data: order
+    });
+    
+  } catch (error) {
+    res.status(400).json({
+      status: "Bad request.",
+    });
+  }
+
+
+
+}
+
 
 exports.createShipment = async (req, res) => {
   try {
