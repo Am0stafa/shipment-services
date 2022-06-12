@@ -64,6 +64,9 @@ exports.deleteShipment = async (req, res) =>{
   try {
     await shipment.findByIdAndUpdate(req.id,{
       shipmentStatus:"CANCELED"
+    },{
+      new: true,
+      runValidators: true
     })
     
     
