@@ -62,7 +62,7 @@ exports.createShipment = async (req, res) => {
 
 exports.deleteShipment = async (req, res) =>{
   try {
-    const data =await shipment.findByIdAndUpdate(req.id,{
+    const data = await shipment.findByIdAndUpdate(+req.id,{
       shipmentStatus:"CANCELED"
     },{
       new: true,
