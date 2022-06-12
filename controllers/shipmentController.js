@@ -74,7 +74,6 @@ exports.deleteShipment = async (req, res) =>{
     res.status(200).json({
       status:"Successfully deleted shipment",
       data
-
     })
   } catch (error) {
     res.status(400).json({
