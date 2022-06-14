@@ -1,2 +1,2 @@
 # shipment-services
-https://shipment-services.vercel.app/api/v1/shipments
+https://shipment-services.vercel.app/api/v1/shipment
